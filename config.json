@@ -1,46 +1,40 @@
 {
-	"log_verbose": true,
-    "adminToken" : null,
-    "httpConfig":
+  "log_verbose": true,
+  "adminToken": null,
+
+  "httpConfig": {
+    "port": 12776,
+    "host": "0.0.0.0"
+  },
+
+  "maxPayload": 1048576,
+
+  "apps": [
     {
-        "port": 12776,
-        "host": "::"
+      "name": "Test",
+      "path": "/"
     },
-    "httpsConfig":
     {
-        "port": 12777,
-        "host": "::",
-        "ssl_key_file": "ssl.key",
-        "ssl_cert_file": "ssl.crt"
+      "name": "ChatApp",
+      "path": "/chatapp"
     },
-    "maxPayload": 
-        1048576,
-    "apps": [
-        {
-            "name": "Test",
-            "path": "/"
-        },
-        {
-            "name": "ChatApp",
-            "path": "/chatapp"
-        },
-        {
-            "name": "CallApp",
-            "path": "/callapp"
-        },
-        {
-            "name": "ConferenceApp",
-            "path": "/conferenceapp",
-            "address_sharing": true
-        },
-        {
-            "name": "AutomatedTest",
-            "path": "/test"
-        },
-        {
-            "name": "AutomatedTestShared",
-            "path": "/testshared",
-            "address_sharing": true
-        }
-    ]
+    {
+      "name": "CallApp",
+      "path": "/callapp"
+    },
+    {
+      "name": "ConferenceApp",
+      "path": "/conferenceapp",
+      "address_sharing": true
+    },
+    {
+      "name": "AutomatedTest",
+      "path": "/test"
+    },
+    {
+      "name": "AutomatedTestShared",
+      "path": "/testshared",
+      "address_sharing": true
+    }
+  ]
 }
